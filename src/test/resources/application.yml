@@ -1,0 +1,31 @@
+#spring.profiles.active:
+#
+# Look for all properties in WebDriverProperties.md file.
+#
+###################
+### URL - SITES ###
+###################
+url:
+  google: https://www.google.com/
+  settings: chrome://settings/
+###############################
+### WebDriver Configuration ###
+###############################
+webdriver:
+  browser: chrome #chrome, safari, firefox, edge
+  path:
+    chrome: C:\NTT Data\Automatizacion\Capacitacion\Sesion01\ProyectoWeb\everis-app-web-selenium-java-master\drivers\win\chromedriver.exe
+    edge: C:\NTT Data\Automatizacion\Capacitacion\Sesion01\ProyectoWeb\everis-app-web-selenium-java-master\drivers\win\msedgedriver.exe
+    firefox: C:\NTT Data\Automatizacion\Capacitacion\Sesion01\ProyectoWeb\everis-app-web-selenium-java-master\drivers\win\geckodriver.exe
+    # Si tienes configurado la variable $PATH del sistema con los drivers no es necesario colocar esta propiedad
+  #path: /Users/pmendozz/Documents/NTTData/drivers/chromedriver
+
+###########################################################################
+### To use JDBC configuration, comment 'autoconfigure.exclude' property ###
+###########################################################################
+spring:
+  dataSource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:54322/xxxx
+    username: xxxx
+    password: xxxx
