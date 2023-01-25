@@ -4,6 +4,7 @@ import com.nttdata.ct.web.WebAutomationApplication;
 import com.nttdata.ct.web.lib.WebDriverManager;
 import com.nttdata.ct.web.step.GoogleSearchStep;
 import com.nttdata.ct.web.step.GoogleSettingsStep;
+import com.nttdata.ct.web.step.SauceStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,12 +22,18 @@ public class GoogleStepDefinition {
     @Value("${url.settings}")
     private String urlGoogleSettings;
 
+    @Value("${url.sauce}")
+    private String urlSauce;
+
     @Autowired
     private WebDriverManager manager;
     @Autowired
     private GoogleSearchStep searchStep;
     @Autowired
     private GoogleSettingsStep settingsStep; //demo shadowRoot
+
+    @Autowired
+    private SauceStep SauceStep;
 
     @Given("que abro la pagina de google")
     public void queAbroLaPaginaDeGoogle() {
@@ -36,6 +43,11 @@ public class GoogleStepDefinition {
     @Given("que abro la pagina de configuracio de google")
     public void queAbroLaPaginaDeConfiguracioDeGoogle() {
         manager.navigateTo(urlGoogleSettings);
+    }
+
+    @Given("que abro la pagina de sauce")
+    public void queAbroLaPaginaDeSauce() {
+        manager.navigateTo(urlSauce);
     }
 
     @When("escribo la busqueda de: {string}")
@@ -57,4 +69,7 @@ public class GoogleStepDefinition {
     public void validoQueElResultadoSea(String result) {
         settingsStep.validateValueResult(result);
     }
+
+    @When("escribo usurio: {string}")
+    public void escriboUsuario(String option){}
 }

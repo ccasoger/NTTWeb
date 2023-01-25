@@ -18,7 +18,7 @@ import java.util.logging.Logger;
         publish = true,
         features = {"src/test/resources/features"},
         glue = {"com.nttdata.ct.web.hooks", "com.nttdata.ct.web.glue"},
-        tags = "@GOOGLE_SETTINGS"
+        tags = "@GOOGLE_SEARCH"
 )
 public class RunnerTest {
 

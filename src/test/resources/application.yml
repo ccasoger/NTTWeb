@@ -8,6 +8,8 @@
 url:
   google: https://www.google.com/
   settings: chrome://settings/
+  sauce: https://www.saucedemo.com/
+
 ###############################
 ### WebDriver Configuration ###
 ###############################
