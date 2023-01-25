@@ -70,6 +70,8 @@ public class GoogleStepDefinition {
         settingsStep.validateValueResult(result);
     }
 
-    @When("escribo usurio: {string}")
-    public void escriboUsuario(String option){}
+    @When("escribo usuario y contraseña : {string},{string}")
+    public void escriboUsuarioPass(String usuario, String pass){SauceStep.login(usuario,pass);}
+    @Then("valido el ingreso correcto")
+    public void validoIngresoCorrecto(){SauceStep.validateLogin();}
 }

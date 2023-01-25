@@ -16,4 +16,8 @@ public class StepPages {
     public GoogleSettinsPage settinsPage() {
         return new GoogleSettinsPage();
     }
+
+    public SaucePage inicialPage(){ return new SaucePage(); }
+
+    public SauceLoginPage loginPage(){ return new SauceLoginPage(); }
 }

@@ -13,3 +13,9 @@ Característica: Prueba de concepto SpringBoot + Cucumber - GOOGLE
     Dado que abro la pagina de configuracio de google
     Cuando busco la opcion "Usuario"
     Entonces valido que el resultado sea "Autocompletar"
+
+  @SAUCE_PAGE
+  Escenario: caso3-LoginSauce
+    Dado que abro la pagina de sauce
+    Cuando escribo usuario y contraseña : "standard_user","secret_sauce"
+    Entonces valido el ingreso correcto

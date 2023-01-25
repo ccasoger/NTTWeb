@@ -18,6 +18,7 @@ public class GoogleSearchStep {
         page.searchPage().search();
     }
 
+
     public void validateResults(int count) {
         Assert.assertTrue("Resultado esperado menor o igual 0.", page.resultsPage().getSearchResults().length() > count);
     }
