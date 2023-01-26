@@ -11,6 +11,7 @@ public class SauceStep {
     @Autowired
     private StepPages page;
 
+
     public void login(String user,String pass) {
         page.inicialPage().writeUser(user);
         page.inicialPage().writePass(pass);
@@ -22,5 +23,13 @@ public class SauceStep {
                 nameLabel, page.loginPage().getLabelName());
     }
 
+    public void viewProduct(){
+        page.loginPage().viewProduct();
+    }
+
+    public void validateViewProduct(String labelBack) {
+        Assert.assertEquals("El valor del resultado obtenido corresponde con el valore esperado.",
+                labelBack, page.);
+    }
 
 }

@@ -75,7 +75,8 @@ public class GoogleStepDefinition {
     @Then("valido el ingreso correcto con label {string}")
     public void validoIngresoCorrecto(String nameLabel){SauceStep.validateLogin(nameLabel);}
 
-
+    @When("selecciono un producto")
+    public void seleccionProducto(){SauceStep.viewProduct();}
 
 
 }
