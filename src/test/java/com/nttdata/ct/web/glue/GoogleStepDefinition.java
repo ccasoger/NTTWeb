@@ -72,6 +72,10 @@ public class GoogleStepDefinition {
 
     @When("escribo usuario y contraseña : {string},{string}")
     public void escriboUsuarioPass(String usuario, String pass){SauceStep.login(usuario,pass);}
-    @Then("valido el ingreso correcto")
-    public void validoIngresoCorrecto(){SauceStep.validateLogin();}
+    @Then("valido el ingreso correcto con label {string}")
+    public void validoIngresoCorrecto(String nameLabel){SauceStep.validateLogin(nameLabel);}
+
+
+
+
 }

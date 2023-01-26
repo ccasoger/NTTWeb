@@ -17,7 +17,10 @@ public class SauceStep {
         page.inicialPage().login();
     }
 
-    public void validateLogin() {
-        Assert.assertTrue("Se ingreso con exito", page.loginPage().getLabelName()=="Products");
+    public void validateLogin(String nameLabel) {
+        Assert.assertEquals("El valor del resultado obtenido corresponde con el valore esperado.",
+                nameLabel, page.loginPage().getLabelName());
     }
+
+
 }
