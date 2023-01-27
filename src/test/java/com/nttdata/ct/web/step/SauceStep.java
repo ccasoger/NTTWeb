@@ -29,7 +29,7 @@ public class SauceStep {
 
     public void validateViewProduct(String labelBack) {
         Assert.assertEquals("El valor del resultado obtenido corresponde con el valore esperado.",
-                labelBack, page.);
+                labelBack, page.productPage().getLabelName2());
     }
 
 }

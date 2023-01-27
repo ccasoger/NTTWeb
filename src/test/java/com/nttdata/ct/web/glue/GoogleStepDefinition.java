@@ -78,5 +78,8 @@ public class GoogleStepDefinition {
     @When("selecciono un producto")
     public void seleccionProducto(){SauceStep.viewProduct();}
 
+    @Then("valido la seleccion correcta con label {string}")
+    public void validoSeleccionCorrecta(String labelBack) {SauceStep.validateViewProduct(labelBack);
+    }
 
 }

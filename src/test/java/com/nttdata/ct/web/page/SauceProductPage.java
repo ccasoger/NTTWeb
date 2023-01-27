@@ -14,7 +14,7 @@ public class SauceProductPage extends WebBase{
     protected WebElement backProducts;
 
 
-    public String getLabelName() {
+    public String getLabelName2() {
         return getText(backProducts);
     }
 }

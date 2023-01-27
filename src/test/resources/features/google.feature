@@ -19,3 +19,5 @@ Característica: Prueba de concepto SpringBoot + Cucumber - GOOGLE
     Dado que abro la pagina de sauce
     Cuando escribo usuario y contraseña : "standard_user","secret_sauce"
     Entonces valido el ingreso correcto con label "PRODUCTS"
+    Cuando selecciono un producto
+    Entonces valido la seleccion correcta con label "BACK TO PRODUCTS"

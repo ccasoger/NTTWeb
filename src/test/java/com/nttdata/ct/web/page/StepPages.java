@@ -20,4 +20,6 @@ public class StepPages {
     public SaucePage inicialPage(){ return new SaucePage(); }
 
     public SauceLoginPage loginPage(){ return new SauceLoginPage(); }
+
+    public SauceProductPage productPage(){return new SauceProductPage();}
 }
